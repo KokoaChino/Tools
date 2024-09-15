@@ -2,34 +2,26 @@ package Tools;
 
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Random;
 
 
 public class StringHash { // 字符串哈希
-    public List<Integer> StringHash(String s, String t) { // s：主串 t：目标串
-        final int m = s.length(), n = t.length();
-        if (m < n) return new ArrayList<>();
-        final int BASE = 107, MOD = 1000000007;
-        long T = 0, H = 0, S = FastPower(BASE, n, MOD);
-        List<Integer> res = new ArrayList<>();
-        for (int i = 0; i < n; i++)
-            T = (T * BASE + t.charAt(i)) % MOD;
-        for (int i = 0; i < n; i++)
-            H = (H * BASE + s.charAt(i)) % MOD;
-        if (H == T) res.add(0);
-        for (int i = 1; i <= m - n; i++) {
-            H = ((H * BASE - s.charAt(i - 1) * S + s.charAt(i + n - 1)) % MOD + MOD) % MOD;
-            if (H == T) res.add(i);
+
+    private static final int BASE = (int) 8e8 + new Random().nextInt((int) 1e8), MOD = 1070777777;
+    private int[] pow_base, pre_hash;
+
+    StringHash(String s) {
+        int n = s.length();
+        this.pow_base = new int[n + 1];
+        this.pre_hash = new int[n + 1];
+        pow_base[0] = 1;
+        for (int i = 0; i < n; i++) {
+            pow_base[i + 1] = (int) ((long) pow_base[i] * BASE % MOD);
+            pre_hash[i + 1] = (int) (((long) pre_hash[i] * BASE + s.charAt(i)) % MOD);
         }
-        return res;
     }
 
-    private long FastPower(int x, int y, int mod) { // 快速幂
-        long res = 1;
-        while (y != 0) {
-            if ((y & 1) != 0) res = res * x % mod;
-            y >>= 1;
-            x = (int) ((long) x * x % mod);
-        }
-        return res;
+    public int sub_hash(int l, int r) { // 子字符串的哈希值
+        return (this.pre_hash[r + 1] - this.pre_hash[l] * this.pow_base[r - l + 1]) % MOD;
     }
 }
