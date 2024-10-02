@@ -3,6 +3,7 @@ package Tools;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.function.Function;
 
 
 public class StringHash { // 字符串哈希
@@ -22,6 +23,6 @@ public class StringHash { // 字符串哈希
     }
 
     public int sub_hash(int l, int r) { // 子字符串的哈希值
-        return (this.pre_hash[r + 1] - this.pre_hash[l] * this.pow_base[r - l + 1]) % MOD;
+        return (int) (((long) pre_hash[r + 1] - (long) pre_hash[l] * pow_base[r - l + 1]) % MOD + MOD) % MOD;
     }
 }
