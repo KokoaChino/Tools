@@ -6,7 +6,7 @@ import java.util.Random;
 import java.util.function.Function;
 
 
-public class StringHash { // 字符串哈希
+class StringHash { // 字符串哈希
 
     private static final int BASE = (int) 8e8 + new Random().nextInt((int) 1e8), MOD = 1070777777;
     private int[] pow_base, pre_hash;
