@@ -5,13 +5,12 @@ import java.io.*;
 
 
 public class Main {
-
-    static final BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-    static final BufferedWriter log = new BufferedWriter(new OutputStreamWriter(System.out));
-
     public static void main(String[] args) throws IOException {
+        try (FileInputStream file = new FileInputStream("src\test.txt");
+             FileOutputStream outputStream = new FileOutputStream("output.txt", true)) {
 
-        reader.close();
-        log.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

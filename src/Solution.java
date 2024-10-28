@@ -1,6 +1,9 @@
 import java.util.*;
 
 
-class Solution {
 
+class Solution {
+    public int minimumCardPickup(int[] cards) {
+
+    }
 }
