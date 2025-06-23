@@ -1,8 +1,8 @@
 package Tools;
 
 
-public class SegmentTree {
-    // 线段树
+class SegmentTree { // 线段树
+
     private static int n;
     public int[] d, lazy;
 

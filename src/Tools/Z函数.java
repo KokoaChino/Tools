@@ -1,7 +1,9 @@
 package Tools;
 
-public class ZFunction { // Z 函数
-    public int[] calZ(String s) {
+
+class ZFunction {
+
+    public static int[] calZ(String s) { // Z 函数
         int n = s.length();
         int[] z = new int[n];
         z[0] = n;

@@ -1,8 +1,9 @@
 package Tools;
 
 
-public class LCS {
-    public int longestCommonSubsequence(int[] arr1, int[] arr2) {
+class LCS {
+
+    public static int longestCommonSubsequence(int[] arr1, int[] arr2) { // 最长公共子序列
         int n = arr2.length;
         int[] f = new int[n + 1];
         for (int x: arr1) {
@@ -16,7 +17,7 @@ public class LCS {
         return f[n];
     }
 
-    public int longestCommonSubsequence(String s, String t) {
+    public static int longestCommonSubsequence(String s, String t) { // 最长公共子序列
         int n = s.length(), m = t.length();
         int[] f = new int[m + 1];
         for (int i = 0; i < n; i++) {

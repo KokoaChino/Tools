@@ -3,8 +3,9 @@ package Tools;
 import java.util.ArrayList;
 
 
-public class LIS {
-    public int lengthOfLIS(int[] nums) {
+class LIS {
+
+    public static int lengthOfLIS(int[] nums) { // 最长递增子序列
         ArrayList<Integer> g = new ArrayList<>();
         for (int x: nums) {
             int i = bisect_left(g, x);
@@ -14,7 +15,7 @@ public class LIS {
         return g.size();
     }
 
-    public int bisect_left(ArrayList<Integer> g, int x) {
+    public static int bisect_left(ArrayList<Integer> g, int x) {
         int n = g.size();
         int left = 0, right = n - 1;
         while (left <= right) {

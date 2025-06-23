@@ -1,7 +1,9 @@
 package Tools;
 
-public class KMP {
-    public int kmp(String s, String t) { // s：主串 t：目标串
+
+class KMP {
+
+    public static int kmp(String s, String t) { // s：主串 t：目标串
         int m = s.length(), n = t.length(), j = 0;
         if (n == 0) return -1;
         int[] next = new int[n];

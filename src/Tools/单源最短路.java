@@ -3,8 +3,9 @@ package Tools;
 import java.util.*;
 
 
-public class Dijkstra {
-    public int[] dijkstra(int[][] mat, int a) { // Dijkstra 单源最短路算法
+class Dijkstra {
+
+    public static int[] dijkstra(int[][] mat, int a) { // 单源最短路
         int n = mat.length;
         int[] ans = new int[n];
         Arrays.fill(ans, Integer.MAX_VALUE);
@@ -23,7 +24,7 @@ public class Dijkstra {
         return ans;
     }
 
-    public int[] dijkstra(ArrayList<int[]>[] g, int a) { // 堆优化的 Dijkstra 单源最短路算法
+    public static int[] dijkstra(ArrayList<int[]>[] g, int a) { // 堆优化的单源最短路
         int n = g.length;
         int[] ans = new int[n];
         Arrays.fill(ans, Integer.MAX_VALUE);

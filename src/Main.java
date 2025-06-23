@@ -1,16 +1,17 @@
+import java.io.*;
+
 // int n = Integer.parseInt(reader.readLine());
 // int[] a = Arrays.stream(reader.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
 
-import java.io.*;
-
 
 public class Main {
-    public static void main(String[] args) throws IOException {
-        try (FileInputStream file = new FileInputStream("src\test.txt");
-             FileOutputStream outputStream = new FileOutputStream("output.txt", true)) {
+    static final BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+    static final BufferedWriter log = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    public static void main(String[] args) throws IOException {
+
+
+        reader.close();
+        log.close();
     }
 }

@@ -3,9 +3,10 @@ package Tools;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 
-public class TopologicalSort {
 
-    public ArrayList<Integer> get(int n, int[][] edges) { // 返回该有向无环图的拓扑排序
+class TopologicalSort {
+
+    public static ArrayList<Integer> get(int n, int[][] edges) { // 返回该有向无环图的拓扑排序
         int[] deg = new int[n];
         ArrayList<ArrayList<Integer>> g = new ArrayList<>();
         for (int i = 0; i < n; i++) g.add(new ArrayList<Integer>());

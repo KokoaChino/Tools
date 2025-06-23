@@ -3,9 +3,10 @@ package Tools;
 import java.util.HashSet;
 import java.util.Set;
 
-public class LogTrick {
 
-    public Set<Integer> or_list(int[] nums) {
+class LogTrick {
+
+    public static Set<Integer> or_list(int[] nums) { // 返回按位或的结果集
         int n = nums.length;
         Set<Integer> res = new HashSet<>();
         for (int i = 0; i < n; i++) {
@@ -19,7 +20,7 @@ public class LogTrick {
         return res;
     }
 
-    public Set<Integer> and_list(int[] nums) {
+    public static Set<Integer> and_list(int[] nums) { // 返回按位与的结果集
         int n = nums.length;
         Set<Integer> res = new HashSet<>();
         for (int i = 0; i < n; i++) {

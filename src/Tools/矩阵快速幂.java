@@ -1,7 +1,7 @@
 package Tools;
 
 
-public class MatrixFastPower {
+class MatrixFastPower { // 矩阵快速幂
 
     private final static int MOD = (int)1e9 + 7;
 

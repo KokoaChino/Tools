@@ -1,8 +1,9 @@
 package Tools;
 
 
-public class Floyd {
-    public void floyd(int[][] mat) { // Floyd全源最短路算法
+class Floyd {
+
+    public static void floyd(int[][] mat) { // 全源最短路
         int n = mat.length;
         for (int k = 0; k < n; k++)
             for (int i = 0; i < n; i++)

@@ -5,9 +5,9 @@ import java.util.Deque;
 import java.util.ArrayDeque;
 
 
-public class MonotoneStack { // 单调栈
+class MonotoneStack { // 单调栈
 
-    public int[] lastSmallerElement(int[] nums) { // 上一个更小元素
+    public static int[] lastSmallerElement(int[] nums) { // 上一个更小元素
         int n = nums.length;
         int[] ans = new int[n];
         Arrays.fill(ans, -1);
@@ -20,7 +20,7 @@ public class MonotoneStack { // 单调栈
         return ans;
     }
 
-    public int[] lastBiggerElement(int[] nums) { // 上一个更大元素
+    public static int[] lastBiggerElement(int[] nums) { // 上一个更大元素
         int n = nums.length;
         int[] ans = new int[n];
         Arrays.fill(ans, -1);
@@ -33,7 +33,7 @@ public class MonotoneStack { // 单调栈
         return ans;
     }
 
-    public int[] nextSmallerElement(int[] nums) { // 下一个更小元素
+    public static int[] nextSmallerElement(int[] nums) { // 下一个更小元素
         int n = nums.length;
         int[] ans = new int[n];
         Arrays.fill(ans, n);
@@ -46,7 +46,7 @@ public class MonotoneStack { // 单调栈
         return ans;
     }
 
-    public int[] nextBiggerElement(int[] nums) { // 下一个更大元素
+    public static int[] nextBiggerElement(int[] nums) { // 下一个更大元素
         int n = nums.length;
         int[] ans = new int[n];
         Arrays.fill(ans, n);

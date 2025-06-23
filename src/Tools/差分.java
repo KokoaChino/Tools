@@ -1,9 +1,9 @@
 package Tools;
 
 
-public class Difference {
+class Difference {
 
-    public void oneDifference(int[] nums, int[][] operates) {
+    public static void oneDifference(int[] nums, int[][] operates) { // 一维差分
         int n = nums.length;
         int[] dif = new int[n + 1];
         for (int[] a: operates) {
@@ -17,7 +17,7 @@ public class Difference {
         }
     }
 
-    public void twoDifference(int[][] mat, int[][] operates) {
+    public static void twoDifference(int[][] mat, int[][] operates) { // 二维差分
         int m = mat.length, n = mat[0].length;
         int[][] dif = new int[m + 2][n + 2];
         for (int[] a: operates) {

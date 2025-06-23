@@ -1,8 +1,8 @@
 package Tools;
 
 
-public class BinaryIndexedTreesSum {
-    // 树状数组 Sum
+class BinaryIndexedTreesSum { // 树状数组 Sum
+
     public static int n;
     public static int[] d;
 

@@ -1,17 +1,14 @@
 package Tools;
 
-import java.util.List;
-import java.util.ArrayList;
 import java.util.Random;
-import java.util.function.Function;
 
 
 class StringHash { // 字符串哈希
 
     private static final int BASE = (int) 8e8 + new Random().nextInt((int) 1e8), MOD = 1070777777;
-    private int[] pow_base, pre_hash;
+    private final int[] pow_base, pre_hash;
 
-    StringHash(String s) {
+    public StringHash(String s) {
         int n = s.length();
         this.pow_base = new int[n + 1];
         this.pre_hash = new int[n + 1];
@@ -22,7 +19,7 @@ class StringHash { // 字符串哈希
         }
     }
 
-    public int sub_hash(int l, int r) { // 子字符串的哈希值
+    public int subHash(int l, int r) { // 计算子字符串的哈希值
         return (int) (((long) pre_hash[r + 1] - (long) pre_hash[l] * pow_base[r - l + 1]) % MOD + MOD) % MOD;
     }
 }

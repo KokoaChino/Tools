@@ -3,8 +3,9 @@ package Tools;
 import java.util.Arrays;
 
 
-public class PalindromicString {
-    public boolean[][] getIsP(String s) {
+class PalindromicString {
+
+    public static boolean[][] getIsP(String s) { // 判断子串 s[i:j] 是否是回文的
         int n = s.length();
         boolean[][] f = new boolean[n][n];
         for (int i = 0; i < n; i++)
